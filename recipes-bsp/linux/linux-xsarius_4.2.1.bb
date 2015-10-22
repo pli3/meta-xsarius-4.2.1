@@ -8,12 +8,12 @@ KV = "4.2.1"
 
 inherit kernel machine_kernel_pr
 
-SRC_URI[md5sum] = "e99a4c99b0dacd5b27451384679a3bd6"
-SRC_URI[sha256sum] = "9ac5e920c5ef0aaec2869cf19eaad3c59d076597a06f2d67d1d4006a496cb3bb"
+SRC_URI[md5sum] = "48d1c96b3bedcc6a11c34eede6e36bfd"
+SRC_URI[sha256sum] = "ed11d537b1e19d59b132fd643bebc7469bf20e115bdc23e949e2ce14ae53aadc"
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${KV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-SRC_URI += "http://en3homeftp.net/pub/src/linux-${KV}-${SRCDATE}.tar.xz \
+SRC_URI += "http://en3homeftp.net/pub/src/xsarius-linux-${KV}-${SRCDATE}.tar.gz \
     file://defconfig \
     "
 
