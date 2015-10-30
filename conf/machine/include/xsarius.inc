@@ -13,6 +13,7 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	xsarius-gst-plugin-dvbmediasink \
+	splash-bootlogo \
 "
 
 TARGET_ARCH = "mipsel"
@@ -41,6 +42,10 @@ IMAGE_CMD_ubi_prepend = " \
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/; \
 	cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/oe_rootfs.bin; \
+	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash.bmp ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash.bmp; \
+	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash1.bmp ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash1.bmp; \
+	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash2.bmp ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash2.bmp; \
+	cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash3.bmp ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash3.bmp; \
 	gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/oe_kernel.bin; \
 	cd ${DEPLOY_DIR_IMAGE}; \
 	zip ${BRANDTYPE}-${IMAGE_NAME}-${KV}-${DATE}_usb.zip ${IMAGEDIR}/*; \
